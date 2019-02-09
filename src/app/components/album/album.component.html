@@ -1,0 +1,27 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="!loading" class="row animated fadeIn">
+  <div class="col-6 view pointer">
+    <a [href]="album.images[0].url" target="_blank">
+      <img class="card-img-top" [src]="album.images[0].url" [alt]="album.name">
+    </a>  
+  </div>
+
+  <div class="col">
+      <h5 class="display-4 pointer">
+        <a [href]="album.external_urls.spotify" target="_blank" style="color: white; text-decoration: none;">
+          {{ album.name }}
+        </a>
+      </h5>
+      <p>
+        <span *ngFor="let artist of artists" class="badge badge-primary pointer">
+          <a (click)="getArtist(artist.id)" style="color: white; text-decoration: none;">
+            {{ artist.name}}
+          </a>
+        </span>
+      </p>
+  </div>
+  <div class="col-4 text-right m-3">
+    <button (click)="goBack()" class="btn btn-outline-danger">Go Back</button>
+  </div>
+</div>
