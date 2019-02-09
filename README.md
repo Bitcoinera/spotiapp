@@ -1,5 +1,13 @@
 # Spotiapp
 
+To use this app you would need to have Angular installed. I used the 7.3.0 version.
+Also you would need to provide your own access token for Spotify in src/app/services/spotify.service.ts, inside the getQuery method.
+
+More info on how to get this token here: 
+https://developer.spotify.com/documentation/general/guides/authorization-guide/
+
+The main purpose of this project was learning about the GET http request with Angular and communicating with public APIs. That's why I didn't make a back-end to automatically generate this token. However, everyone is welcome to make a pull request if they would like to add this feature ^^ I will be very grateful.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## Development server
